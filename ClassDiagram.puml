@@ -1,0 +1,157 @@
+@startuml
+
+class Room {
+-roomName: character
+-description: character
+-level: integer
+-itemsInRoom: list
+-isLocked: boolean
++set_exit()
++get_short_description()
++get_long_description()
++get_exits()
++get_exit()
++add_item()
++remove_item()
+}
+
+class Player{
+-username: character
+-weightCapacity: integer
++viewItems()
++pickItems()
++dropItems()
+}
+
+abstract class Item{
+-weight: integer
+-description: character
+}
+
+class Bag{
+-capacity: integer
+-weight: integer
+-description: character
+}
+Item <|--Bag
+
+class Gun{
+-remainingBullets: integer
+-magSize: integer
+-weight: integer
+-description: character
++shoot()
++reload()
+}
+Item <|-- Gun
+class AutomaticGun{
+-remainingBullets: integer
+-magSize: integer
+-weight: integer
+-description: character
++shoot()
++reload()
+}
+Gun <|--AutomaticGun
+class Bullets{
+-count: integer
+-capacity: integer
+-weight: integer
+-description: character
+}
+Item <|-- Bullets
+class Keys{
+-weight: integer
+-description: character
+-keyOpens: character
++unlock_door()
+}
+Item<|--Keys
+class Clothes{
+-weight: integer
+-description: character
+}
+Item<|--Clothes
+class Helicopter{
+-description: character
+-isLocked: boolean
++fly()
+}
+Item<|--Helicopter
+class Baby{
+-weight: integer
+-description: character
+}
+Item<|--Baby
+class Knife{
+-weight: integer
+-description: character
++cut()
+}
+Item<|--Knife
+
+class image_objects{
+-item_dict: dictionary
++item_locs()
+}
+
+class Game{
+-current_room: room object
+-next_room_locked: room object
+-player: player object
+-zombie1alive: boolean
+-zombie2alive: boolean
+-zombieMainalive: boolean
+
++create_objects()
++create_rooms()
++create_player()
++print_welcome()
++show_command_words()
++print_help()
++do_go_command()
++story()
+}
+
+Game -- Room
+Game -- Player
+Game -- Bag
+Game -- Gun
+Game ---- AutomaticGun
+Game -- Bullets
+Game -- Keys
+Game -- Clothes
+Game -- Helicopter
+Game -- Baby
+Game -- Knife
+
+class App{
+-game: game object
+-player_check: boolean
+-root: window object
+-frame1: frame object
+-frame2: frame object
+-frame3: frame object
+-text_area1: label object
+-ioj: image_objects
+-button_list: dictionary
+-drop_list: dictionary
+-log: txt file object
++room_ui()
++destroy_rooms()
++create_room_UI()
++move_character()
++hide_inventory_options()
++show_inventory_options()
++game_over()
++do_command()
++record_commands()
++get_command_string()
++process_command()
++show_about()
+}
+
+App - Game
+App - image_objects
+
+@enduml
