@@ -1,5 +1,6 @@
-# StrandedInApocalyse
-1.	Problem Statement
+# Stranded In Apocalyse
+## 1.	Problem Statement
+
 The python program is a basic UI-based game that allows the user to interact with the game environment to play an adventure space game. An adventure space game is a game where the character can roam around freely and complete designated tasks to win the game. The following paragraphs describe the game scenario and capabilities.
 1.1 Game scenario
 This game is set in a post-apocalyptic world. The player who was in hibernation wakes up in a world that has been taken over by zombies. The player is situated in a lab where the virus was born. This is a military experiment facility that was being used to experiment on humans to produce super soldiers. The player was also part of the experiments. As he/she was kept in an experimental isolation pod, they survived the outbreak. However, as he is awake, he is responsible for saving the world. Some pre-recorded messages by scientists mention the antidote. The antidote is within an experiment child which is in the same laboratory complex. As the lab building is destroyed the player must take the child, the antidote, to another lab on the outskirts of the city so that the scientists can cure the disease.
