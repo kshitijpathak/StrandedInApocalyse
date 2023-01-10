@@ -18,12 +18,7 @@ Please refer to the below image to view the class diagram relationships for the 
    c.	Player.py: used to instantiate the player object
    d.	Inventory.py: contains various objects needed throughout the game
 2.	App.py, interacts with image_objects.py which helps in importing the images being used in the game
- 
 
-
-
-## 3.	Class Description
-This section describes the changes and enhancements to the existing classes and any other new classes constructed to convert the game from a simple text-based game to a UI-based game.
 
 ![ClassDiagram](https://user-images.githubusercontent.com/46666736/211586517-3a30a7d9-628e-4930-aa8c-1ab34e11a3cb.png)
 
