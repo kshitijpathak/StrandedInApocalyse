@@ -25,23 +25,5 @@ Please refer to the below image to view the class diagram relationships for the 
 ## 3.	Class Description
 This section describes the changes and enhancements to the existing classes and any other new classes constructed to convert the game from a simple text-based game to a UI-based game.
 
-### 3.1 Changes to existing classes
+![ClassDiagram](https://user-images.githubusercontent.com/46666736/211586517-3a30a7d9-628e-4930-aa8c-1ab34e11a3cb.png)
 
-1.	TextUI.py: this script is removed altogether from the game application as the game is converted from a text-based to a UI-based interface
-2.	Room.py - Room class: 
-   a.	Added an attribute to get the name of the room to facilitate identification of the rooms elsewhere in the code e.g. while placing items in the room
-   b.	Added two methods namely, add_item and remove_item, to add and remove items from a particular room
-   c.	Removed unlock_door method
-3.	Player.py – Player class: added a method named; viewItems to show the items being held by the character
-4.	Inventory.py:
-   a.	Bag class: removed methods pickItems and dropItems, moved these to player class instead
-   b.	Keys class: modified the key class
-5.	Game.py – Game class:
-   a.	Modified create_player class to take input from the user interface and create player accordingly
-   b.	Removed play method which created the game loop in text-UI game
-   c.	Print_welcome, print_help methods now return the messages instead of printing to the console using textUI method. The returned message is used further to display       in the UI
-   d.	Removed show_command_words method
-   e.	Added some error handling to do_go_command method
-   f.	Method process_command moved to main app script as the input is now received as button clicks and not text inputs
-   g.	Removed inventory_options method and created an equivalent function in the main app script
-   h.	Story method now returns the storylines instead of printing them on the console via TextUI class. The story method also returns the player’s position on the           frame depending on the room where the character is located in. This was added here to avoid duplication of large if else ladder.
